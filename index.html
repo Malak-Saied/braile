@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مترجم لغة برايل الفوري</title>
+    <style>
+        /* CSS بسيط وتصميم مريح للعين */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 { color: #2c3e50; margin-bottom: 20px; }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 12px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: none;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        textarea:focus { border-color: #3498db; outline: none; }
+        .result-box {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            min-height: 80px;
+            font-size: 24px; /* كبرنا الخط عشان رموز برايل تبان بوضوح */
+            letter-spacing: 3px;
+            word-wrap: break-word;
+            text-align: right;
+            border: 1px solid #dcdde1;
+        }
+        label { font-weight: bold; display: block; margin-bottom: 8px; text-align: right; color: #34495e; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🖨️ مترجم لغة برايل</h1>
+    
+    <label for="userInput">أدخل النص (عربي / إنجليزي / أرقام):</label>
+    <textarea id="userInput" placeholder="اكتب هنا ليتحول تلقائياً..."></textarea>
+    
+    <label>النتيجة بلغة برايل:</label>
+    <div id="brailleResult" class="result-box"></div>
+</div>
+<script src="script.js"></script>

@@ -52,10 +52,10 @@ NUMBER_SIGN = '⠼'    # مفتاح الأرقام
 
 def translate_to_braille(text):
     braille_result = []
-    in_number_mode = False  # مؤشر لمعرفة هل نحن داخل سلسلة أرقام أم لا
+    in_number_mode = False 
     
     for char in text:
-        # أ) إذا كان الحرف رقماً
+        
         if char.isdigit():
             if not in_number_mode:
                 
